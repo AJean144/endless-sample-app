@@ -11,6 +11,7 @@ import {
   getRecentEffectiveDateTitle,
   getRecentEffectiveDateBody,
 } from "../../utils/getRecentEffectiveDate";
+import theme from "../../config/theme";
 
 const Steps = () => {
   useEffect(() => {
@@ -34,7 +35,7 @@ const Steps = () => {
           .map((step, index) => (
             <Step key={step.id} index={index + 1}>
               <StepNumber>
-                <Text fontSize="5em" fontFamily="Lato-Regular">
+                <Text fontSize="5em" fontFamily={theme.fonts.family.heading}>
                   {formatNum(step.stepNumber)}
                 </Text>
                 <Underline />
